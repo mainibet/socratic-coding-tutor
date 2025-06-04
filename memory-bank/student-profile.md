@@ -1,7 +1,7 @@
 <!-- Memory Bank File: Student Profile -->
 <!-- Purpose: Long-term, relatively static information about a student -->
 <!-- Update Frequency: When new stable traits or goals are identified -->
-<!-- Cross-references: Links to progress.md for mastered topics -->
+<!-- Cross-references: →progress.md (mastered topics), →active-session.md (current context) -->
 
 # Student Profile
 

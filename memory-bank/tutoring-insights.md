@@ -1,7 +1,7 @@
 <!-- Memory Bank File: Tutoring Insights & Patterns -->
 <!-- Purpose: Capture generalizable tutoring effectiveness patterns and strategies -->
 <!-- Update Frequency: When new generalizable insights are gained -->
-<!-- Cross-references: Links to knowledgebase.md and common-student-issues.md -->
+<!-- Cross-references: ←progress.md (learning patterns), ←common-student-issues.md (diagnostic strategies) -->
 
 # Tutoring Insights & Learned Patterns
 

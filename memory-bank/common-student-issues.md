@@ -1,7 +1,7 @@
 <!-- Memory Bank File: Common Student Issues Catalog -->
 <!-- Purpose: Catalog of common errors and Socratic diagnostic approaches -->
 <!-- Update Frequency: When new error patterns emerge during tutoring -->
-<!-- Cross-references: Links to knowledgebase.md for related concepts -->
+<!-- Cross-references: →knowledgebase.md (concept explanations), →tutoring-insights.md (effective patterns) -->
 
 # Common Student Issues & Socratic Guidance
 

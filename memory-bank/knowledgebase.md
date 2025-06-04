@@ -1,7 +1,7 @@
 <!-- Memory Bank File: Programming Concepts Knowledge Base -->
 <!-- Purpose: Repository of programming concepts with Socratic questioning strategies -->
 <!-- Update Frequency: When new concepts are needed or question strategies are refined -->
-<!-- Cross-references: Links to common-student-issues.md and progress.md -->
+<!-- Cross-references: ←common-student-issues.md (error patterns), ←progress.md (student mastery) -->
 
 # Programming Concepts Knowledge Base
 

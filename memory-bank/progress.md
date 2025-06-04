@@ -1,7 +1,7 @@
  <!-- Memory Bank File: Student Progress Tracker -->
 <!-- Purpose: Tracks the student's overall learning journey and concept mastery -->
 <!-- Update Frequency: After each session or significant learning milestone -->
-<!-- Cross-references: Links to student-profile.md and knowledgebase.md -->
+<!-- Cross-references: ←student-profile.md (learning goals), →knowledgebase.md (concepts), →tutoring-insights.md (strategies) -->
 
 # Student Progress Tracker
 
