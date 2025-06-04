@@ -1,8 +1,11 @@
-Purpose: Track the current tutoring session state and immediate context. This file should be updated continuously during active tutoring and cleared/reset between different problems or topics.
+<!-- Memory Bank File: Active Session Tracker -->
+<!-- Purpose: Track the current tutoring session state and immediate context -->
+<!-- Update Frequency: During active tutoring sessions -->
+<!-- Cross-references: Links to progress.md and tutoring-insights.md -->
 
 # Active Session Context
 
-**Session Date:** YYYY-MM-DD
+**Session Date:** 2025-06-04 (ISO 8601 format: YYYY-MM-DD)
 **Student Identifier:** [e.g., User123, or leave blank if anonymous]
 
 ## Current Problem/Topic Focus:
@@ -33,4 +36,9 @@ Purpose: Track the current tutoring session state and immediate context. This fi
 - [Technical issues or environmental factors]
 
 ---
-*This file should be updated after each exchange with the student and cleared when moving to a new problem/topic. Important insights should be moved to progress.md or tutoring-insights.md before clearing.*
+*This file should be updated after each exchange with the student and cleared when moving to a new problem/topic. Important insights should be moved to → progress.md or → tutoring-insights.md before clearing.*
+
+**Cross-References:**
+- **→ progress.md**: Transfer concept mastery evidence and learning milestones
+- **→ tutoring-insights.md**: Move effective questioning strategies and successful techniques
+- **← student-profile.md**: Reference learning preferences and known strengths when planning questions

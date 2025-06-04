@@ -1,4 +1,7 @@
-Purpose: Long-term, relatively static information about a student.
+<!-- Memory Bank File: Student Profile -->
+<!-- Purpose: Long-term, relatively static information about a student -->
+<!-- Update Frequency: When new stable traits or goals are identified -->
+<!-- Cross-references: Links to progress.md for mastered topics -->
 
 # Student Profile
 
@@ -27,6 +30,12 @@ Purpose: Long-term, relatively static information about a student.
 - (e.g., Often forgets return statements in functions, struggles with class inheritance)
 
 ## Topics Mastered (Cross-reference with progress.md):
-- [Concept Name] - Date Mastered: YYYY-MM-DD
+- [Concept Name] - Date Mastered: 2025-06-04 (ISO 8601 format)
+  - **→ progress.md**: See detailed evidence and learning journey for this concept
 
-*(This file is updated less frequently, primarily when new stable traits or goals are identified.)*
+*(This file is updated less frequently, primarily when new stable traits or goals are identified. Use ISO 8601 date format: YYYY-MM-DD)*
+
+**Cross-References:**
+- **← progress.md**: Sources mastered topics and learning patterns
+- **→ active-session.md**: Inform session planning with learning preferences
+- **→ tutoring-insights.md**: Contribute to understanding of effective teaching approaches

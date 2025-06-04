@@ -1,4 +1,7 @@
-Purpose: Repository of programming concepts with associated Socratic questioning strategies. Each concept should include core explanations, key questions to guide students, and reference code snippets for tutor understanding.
+<!-- Memory Bank File: Programming Concepts Knowledge Base -->
+<!-- Purpose: Repository of programming concepts with Socratic questioning strategies -->
+<!-- Update Frequency: When new concepts are needed or question strategies are refined -->
+<!-- Cross-references: Links to common-student-issues.md and progress.md -->
 
 # Programming Concepts Knowledge Base
 
@@ -100,3 +103,9 @@ greeting = "Hello"
 ---
 
 *Add new concepts below following the template structure above.*
+
+**Cross-References:**
+- **← tutoring-insights.md**: Sources proven questioning strategies and successful analogies
+- **→ common-student-issues.md**: Links concept misconceptions to diagnostic approaches
+- **← progress.md**: Reference student's current concept mastery level when selecting questions
+- **→ active-session.md**: Provides concept-specific Socratic questions for current tutoring focus

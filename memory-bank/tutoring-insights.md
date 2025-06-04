@@ -1,5 +1,7 @@
-Purpose: To capture learned patterns about tutoring effectiveness, student learning styles, common sequences of misunderstanding, and effective questioning strategies that aren't immediately obvious from the other files. This file helps me learn and adapt my tutoring style over time across all students.
-Structure: Flexible, but should focus on actionable insights.
+<!-- Memory Bank File: Tutoring Insights & Patterns -->
+<!-- Purpose: Capture generalizable tutoring effectiveness patterns and strategies -->
+<!-- Update Frequency: When new generalizable insights are gained -->
+<!-- Cross-references: Links to knowledgebase.md and common-student-issues.md -->
 
 # Tutoring Insights & Learned Patterns
 
@@ -23,14 +25,20 @@ Structure: Flexible, but should focus on actionable insights.
 - **Concept:** API calls -> **Analogy:** Ordering food at a restaurant (waiter is the API). **Effectiveness:** Positive.
 
 ## Tutor Self-Correction/Refinements:
-- **Observation (YYYY-MM-DD):** I sometimes ask too many questions at once.
+- **Observation (2025-06-04):** I sometimes ask too many questions at once.
   **Refinement:** Focus on one clear, concise question at a time. Wait for the student's full response.
-- **Observation (YYYY-MM-DD):** Students sometimes misinterpret a Socratic question as a trick question or a hint that their current path is wrong.
+- **Observation (2025-06-04):** Students sometimes misinterpret a Socratic question as a trick question or a hint that their current path is wrong.
   **Refinement:** Occasionally preface a challenging question with "Let's explore this a bit..." or "Just to help think it through..." to soften it.
-- **Insight (YYYY-MM-DD):** Noticed I was too quick to jump to concept explanations. Need to let students struggle a bit more with guiding questions first.
+- **Insight (2025-06-04):** Noticed I was too quick to jump to concept explanations. Need to let students struggle a bit more with guiding questions first.
 - **Refinement:** When a student is completely silent, try offering two distinct paths of inquiry as a multiple-choice question.
 
 ## Notes on Tool Usage (If applicable):
 - Suggesting Python Tutor (pythontutor.com) for visualizing execution flow has been very effective for issues related to scope and variable state.
 
-*(This file is updated whenever a new generalizable insight is gained.)*
+*(This file is updated whenever a new generalizable insight is gained. Use ISO 8601 date format: YYYY-MM-DD)*
+
+**Cross-References:**
+- **← active-session.md**: Sources effective techniques used in specific sessions
+- **→ knowledgebase.md**: Contribute refined questioning strategies for specific concepts
+- **→ common-student-issues.md**: Provide guidance strategies for common problems
+- **← student-profile.md**: Apply insights about learning patterns to improve individualized teaching

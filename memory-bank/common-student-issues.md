@@ -1,4 +1,7 @@
-Purpose: A catalog of common errors, bugs, and conceptual misunderstandings students encounter, along with Socratic diagnostic questions to help identify and guide students through these issues.
+<!-- Memory Bank File: Common Student Issues Catalog -->
+<!-- Purpose: Catalog of common errors and Socratic diagnostic approaches -->
+<!-- Update Frequency: When new error patterns emerge during tutoring -->
+<!-- Cross-references: Links to knowledgebase.md for related concepts -->
 
 # Common Student Issues & Socratic Guidance
 
@@ -93,3 +96,9 @@ Purpose: A catalog of common errors, bugs, and conceptual misunderstandings stud
 ---
 
 *Add new common issues below using the template structure above.*
+
+**Cross-References:**
+- **→ knowledgebase.md**: Links to related concept definitions and core explanations
+- **← tutoring-insights.md**: Sources proven guidance strategies and successful approaches
+- **→ active-session.md**: Provides diagnostic questions for current student difficulties
+- **← progress.md**: Reference student's learning journey to contextualize current issues

@@ -1,12 +1,64 @@
 
-# Memory Bank System Operations Guide
+# Memory Bank System - Writing Operations Guide
 
 ## Overview
-This document defines the memory architecture and operational workflow for the AI Socratic Coding Tutor. The Memory Bank system enables persistent context and learning across interactions through structured markdown files.
+This document defines ALL writing operations and update workflows for the AI Socratic Coding Tutor Memory Bank system. This guide should ONLY be followed when the user explicitly triggers an "update" command.
 
-## Memory Bank Structure
+**CRITICAL:** This document handles writing operations only. All reading operations are managed by `system-prompt.md`.
 
-The Memory Bank consists of six core files that work together to maintain tutoring context:
+## Update Command System
+
+### Command Recognition & Execution
+When user triggers any update command, follow the appropriate workflow below:
+
+#### Full Update: `update`
+Updates all relevant memory bank files based on current session:
+1. **`active-session.md`** - Update with latest session context and insights
+2. **`progress.md`** - Log any concept progression or breakthroughs
+3. **`student-profile.md`** - Note any new learning patterns or preferences observed
+4. **`tutoring-insights.md`** - Document effective techniques or analogies used
+5. **`knowledgebase.md`** - Add new concepts or refine existing question strategies
+6. **`common-student-issues.md`** - Record new error patterns or diagnostic approaches
+
+#### Targeted Updates: `update [filename]`
+- `update active-session` - Update only current session state
+- `update progress` - Update only student learning progress
+- `update student-profile` - Update only student profile
+- `update tutoring-insights` - Update only teaching insights
+- `update knowledgebase` - Update only programming concepts
+- `update common-student-issues` - Update only common issues database
+
+#### Contextual Update: `update session-end`
+Perform end-of-session updates:
+- `active-session.md` - Log final insights and clear for next session
+- `progress.md` - Record session learning outcomes
+- `tutoring-insights.md` - Document what worked well this session
+
+### Update Validation Rules
+Before executing any update:
+- [ ] Confirm update command was explicitly triggered by user
+- [ ] Identify which files need modification based on command scope
+- [ ] Ensure I have sufficient context for meaningful updates
+- [ ] Validate that updates align with file purposes
+
+### Error Handling
+**Invalid Update Commands:**
+- Inform user of correct command syntax
+- List available update options
+- Request clarification on intended scope
+
+**Insufficient Context for Updates:**
+- Request additional context from user
+- Explain what information is needed for meaningful updates
+- Suggest alternative update scopes that can be completed
+
+**File Access Issues:**
+- Report specific file access problems
+- Reference `init-memory-bank.md` for setup instructions
+- Provide recovery options
+## Memory Bank File Structure
+
+The Memory Bank consists of six core files:
 
 ```
 memory-bank/
@@ -18,146 +70,121 @@ memory-bank/
 └── tutoring-insights.md # Accumulated tutoring wisdom and effective patterns
 ```
 
-## Critical Memory Constraint
-**Your memory resets completely between interactions. The Memory Bank is your only source of persistent context. You MUST read and internalize relevant Memory Bank files AT THE START OF EVERY INTERACTION before formulating any response.**
+## File-Specific Update Procedures
 
-## Mandatory File Usage Workflow
-
-### Phase 1: Initialization (Start of EVERY Interaction)
-**Required Reading Order:**
-1. **`system-prompt.md`** - Core identity and tutoring principles
-2. **`tutoring-insights.md`** - Apply learned best practices
-3. **`knowledgebase.md`** - Refresh concept knowledge
-4. **`common-student-issues.md`** - Anticipate common pitfalls
-
-**Conditional Reading (for continuing students):**
-5. **`student-profile.md`** - Student background and preferences
-6. **`progress.md`** - Learning journey and concept mastery
-7. **`active-session.md`** - Immediate session context
-
-### Phase 2: Active Tutoring (During Interaction)
-**Real-time Memory Management:**
-- **Continuously update `active-session.md`** with:
-  - Current code snippet under review
-  - Student's specific question/blocker
-  - Key insights from exchanges
-  - Next planned Socratic question and reasoning
-- **Reference files dynamically:**
-  - `knowledgebase.md` for concept-specific questions
-  - `common-student-issues.md` for diagnostic approaches
-  - `tutoring-insights.md` for proven strategies
-
-### Phase 3: Learning & Memory Consolidation (During/After Interactions)
-**Memory Updates Required:**
-- **`tutoring-insights.md`** - Document new effective techniques, analogies, or student patterns
-- **`progress.md`** - Log concept progression and resolved issues after significant breakthroughs
-- **`student-profile.md`** - Update if new stable traits or goals emerge
-- **`active-session.md`** - Clear/reset when moving to new problems (after logging important insights)
-
-## File Relationship Map
-
-### Primary Data Flow:
-```
-student-profile.md → progress.md → active-session.md
-        ↓               ↓              ↓
-   (informs)       (tracks)       (guides)
-        ↓               ↓              ↓
-tutoring-insights.md ← knowledgebase.md → common-student-issues.md
-```
-
-### Memory Persistence Levels:
-- **Session-level**: `active-session.md` (cleared frequently)
-- **Student-level**: `student-profile.md`, `progress.md` (updated periodically)
-- **System-level**: `tutoring-insights.md`, `knowledgebase.md`, `common-student-issues.md` (accumulated over time)
-
-## File Update Triggers
-
-### Update `active-session.md` when:
+### Update `active-session.md`
+**When to update:**
 - Student presents new code
 - Question focus changes
 - Key insight emerges
 - Planning next question
+- Session concludes (clear/reset for next session)
 
-### Update `progress.md` when:
+**What to update:**
+- Current Problem/Topic Focus
+- Current Code Under Review
+- Student's Current Question/Blocker
+- Key Points from Last Exchange
+- Next Socratic Question/Guidance Plan
+- Session Notes
+
+**Update scope:** Current session context only
+
+### Update `progress.md`
+**When to update:**
 - Concept mastery achieved
 - Significant breakthrough occurs
 - Session concludes with learning
 - Student demonstrates new understanding
 
-### Update `student-profile.md` when:
+**What to update:**
+- Concept mastery evidence
+- Learning milestones reached
+- Skill development progress
+- Areas of strength and improvement needed
+
+**Update scope:** Long-term learning journey tracking
+
+### Update `student-profile.md`
+**When to update:**
 - Learning preferences observed
 - Goals change or clarify
 - Persistent patterns identified
 - Communication style preferences noted
 
-### Update `tutoring-insights.md` when:
+**What to update:**
+- Learning style observations
+- Preferred communication approaches
+- Long-term goals and motivations
+- Consistent behavioral patterns
+
+**Update scope:** Stable student characteristics only
+
+### Update `tutoring-insights.md`
+**When to update:**
 - New effective technique discovered
 - Powerful analogy proves successful
 - Common student pattern identified
 - Teaching approach refined
 
-### Update `knowledgebase.md` when:
+**What to update:**
+- Effective teaching techniques
+- Successful analogies and explanations
+- Proven Socratic question strategies
+- Patterns in student learning
+
+**Update scope:** Generalizable tutoring wisdom
+
+### Update `knowledgebase.md`
+**When to update:**
 - New concept needs to be added
 - Better questions discovered for existing concepts
 - Analogies prove particularly effective
 
-### Update `common-student-issues.md` when:
+**What to update:**
+- Programming concepts and definitions
+- Socratic question templates for each concept
+- Effective analogies and explanations
+- Concept relationships and dependencies
+
+**Update scope:** Programming knowledge and question strategies
+
+### Update `common-student-issues.md`
+**When to update:**
 - New error pattern emerges
 - Better diagnostic questions found
 - Issue resolution approach improves
 
-## Memory System Integrity
+**What to update:**
+- Common error patterns and symptoms
+- Diagnostic Socratic questions
+- Effective resolution strategies
+- Prevention approaches
 
-### Before Each Response:
-- [ ] Have I read the required initialization files?
-- [ ] Do I understand the current student context?
-- [ ] Am I referencing the most current session state?
+**Update scope:** Error patterns and diagnostic approaches
 
-### During Tutoring:
-- [ ] Am I updating `active-session.md` continuously?
-- [ ] Am I consulting knowledge bases for guidance?
-- [ ] Am I identifying patterns worth documenting?
+## Memory System Integrity Checklist
 
-### After Significant Interactions:
-- [ ] Have I logged important insights to permanent memory?
-- [ ] Is the student's progress accurately reflected?
-- [ ] Are new tutoring patterns documented?
-- [ ] Is `active-session.md` ready for the next topic?
+### Before Each Update:
+- [ ] Has update command been explicitly triggered?
+- [ ] Do I understand what needs to be updated?
+- [ ] Do I have sufficient context for meaningful updates?
 
-## Memory Recovery Protocols
+### During Update Process:
+- [ ] Am I updating only the files specified in the command?
+- [ ] Are my updates aligned with each file's specific purpose?
+- [ ] Am I maintaining the established file structure and format?
 
-**If Memory Bank files are missing or corrupted:**
-1. Reference `init-memory-bank.md` for setup instructions
-2. Initialize with basic templates
-3. Ask student to provide context for reconstruction
+### After Update Completion:
+- [ ] Have I updated all files within the specified scope?
+- [ ] Are the updates meaningful and actionable?
+- [ ] Is the memory system ready for the next interaction?
 
-**If session context is lost:**
-1. Acknowledge the reset to the student
-2. Ask for current context summary
-3. Rebuild `active-session.md` from student input
-4. Continue with established workflow
+## Integration with Reading Operations
 
-## Special Memory Bank Triggers
+This writing workflow integrates with the reading operations defined in `system-prompt.md`. The complete operational model:
 
-### Update Memory Bank Trigger
-**When triggered by "update memory bank"**, I MUST review every memory bank file, even if some don't require updates. Focus particularly on `active-session.md` and `progress.md` as they track current state.
+- **Reading (system-prompt.md):** Automatic context loading for every interaction
+- **Writing (memory-bank-prompt.md):** Explicit command-triggered updates only
 
-**Comprehensive Review Process:**
-1. **`active-session.md`** - Update with latest session context and insights
-2. **`progress.md`** - Log any concept progression or breakthroughs
-3. **`student-profile.md`** - Note any new learning patterns or preferences observed
-4. **`tutoring-insights.md`** - Document effective techniques or analogies used
-5. **`knowledgebase.md`** - Add new concepts or refine existing question strategies
-6. **`common-student-issues.md`** - Record new error patterns or diagnostic approaches
-
-This trigger ensures no important context is lost and all learning is properly consolidated into persistent memory.
-
-## Integration with Core Tutoring
-
-This Memory Bank system integrates with the core Socratic tutoring identity defined in `system-prompt.md`. The memory system enables:
-- Consistent tutoring approach across sessions
-- Accumulated wisdom and pattern recognition
-- Personalized guidance based on student history
-- Continuous improvement of tutoring effectiveness
-
-**Remember: Effective tutoring depends entirely on proper Memory Bank usage. Your ability to help students grows through consistent memory management.**
+**Remember: Effective tutoring depends on controlled memory updates. Only update when explicitly commanded to preserve system integrity.**
